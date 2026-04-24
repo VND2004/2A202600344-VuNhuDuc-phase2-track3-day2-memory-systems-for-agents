@@ -1,0 +1,125 @@
+[
+    {
+        "scenario": "Profile recall: name after 6 turns",
+        "turns": [
+            "Tôi tên là Linh",
+            "Hôm nay tôi cần học memory systems",
+            "Cho tôi 2 ý chính để bắt đầu",
+            "Cảm ơn, tiếp tục giúp tôi",
+            "Tôi đang test multi-turn",
+            "Nhớ tôi benchmark sau"
+        ],
+        "probe": "Tôi tên gì?",
+        "expected_with_memory": "Linh",
+        "expected_without_memory_hint": "không có bộ nhớ"
+    },
+    {
+        "scenario": "Conflict update: allergy overwrite",
+        "turns": [
+            "Tôi dị ứng sữa bò",
+            "Tôi đang lập thực đơn",
+            "À nhầm, tôi dị ứng đậu nành chứ không phải sữa bò",
+            "Tôi cần bạn tổng hợp"
+        ],
+        "probe": "Thông tin dị ứng của tôi là gì?",
+        "expected_with_memory": "đậu nành",
+        "expected_without_memory_hint": "không chắc"
+    },
+    {
+        "scenario": "Profile recall: occupation",
+        "turns": [
+            "Tôi làm backend developer",
+            "Tôi quan tâm tới redis",
+            "Tôi cần hướng dẫn benchmark"
+        ],
+        "probe": "Nghề nghiệp của tôi là gì?",
+        "expected_with_memory": "backend developer",
+        "expected_without_memory_hint": "không có bộ nhớ"
+    },
+    {
+        "scenario": "Episodic recall: completed task",
+        "turns": [
+            "Tôi đã sửa xong lỗi kết nối docker compose",
+            "Tôi đã đặt DB_HOST bằng tên service",
+            "Tôi muốn ghi nhớ bài học này"
+        ],
+        "probe": "Lần trước tôi đã hoàn thành việc gì?",
+        "expected_with_memory": "User update",
+        "expected_without_memory_hint": "không giữ được"
+    },
+    {
+        "scenario": "Semantic retrieval: docker service name",
+        "turns": [
+            "Tôi gặp lỗi app không nối được db trong docker",
+            "Tôi đã thử localhost nhưng vẫn hỏng",
+            "Có faq nào liên quan service name không?"
+        ],
+        "probe": "Hướng dẫn nhanh về docker service name?",
+        "expected_with_memory": "service name",
+        "expected_without_memory_hint": "localhost"
+    },
+    {
+        "scenario": "Semantic retrieval: conflict handling guideline",
+        "turns": [
+            "Tôi muốn thiết kế profile memory",
+            "Cần nguyên tắc cập nhật fact",
+            "Cho tôi faq về conflict handling"
+        ],
+        "probe": "Conflict handling profile nên làm gì?",
+        "expected_with_memory": "ưu tiên thông tin mới nhất",
+        "expected_without_memory_hint": "không"
+    },
+    {
+        "scenario": "Trim budget behavior",
+        "turns": [
+            "Tôi tên là Minh",
+            "Tôi thích python",
+            "Tôi đang học langgraph",
+            "Tôi đã sửa xong bài tập memory",
+            "Tôi cần bạn nhắc lại thông tin quan trọng",
+            "Tôi bổ sung thêm nhiều thông tin để test trim",
+            "Tôi bổ sung thêm dòng nữa để tăng độ dài prompt"
+        ],
+        "probe": "Tôi tên gì và tôi thích gì?",
+        "expected_with_memory": "Minh",
+        "expected_without_memory_hint": "không"
+    },
+    {
+        "scenario": "Episodic + semantic mixed query",
+        "turns": [
+            "Tôi đã hoàn thành task retry timeout xong",
+            "Hãy nhớ bài học này",
+            "Tôi cần faq timeout API"
+        ],
+        "probe": "Lần trước và FAQ timeout gợi ý gì?",
+        "expected_with_memory": "retry strategy",
+        "expected_without_memory_hint": "không"
+    },
+    {
+        "scenario": "Profile preference recall",
+        "turns": [
+            "Tôi thích clean architecture",
+            "Tôi đang viết tài liệu",
+            "Tôi cần đề cương ngắn"
+        ],
+        "probe": "Preference của tôi là gì?",
+        "expected_with_memory": "clean architecture",
+        "expected_without_memory_hint": "không"
+    },
+    {
+        "scenario": "Long conversation memory persistence",
+        "turns": [
+            "Tôi tên là An",
+            "Tôi dị ứng cà phê",
+            "Tôi đã sửa xong cấu hình memory",
+            "Tôi làm data engineer",
+            "Tôi cần test thêm",
+            "Tôi tiếp tục hỏi thêm",
+            "Tôi vẫn đang benchmark",
+            "Tôi đã hoàn thành bước cuối"
+        ],
+        "probe": "Tổng hợp profile chính của tôi?",
+        "expected_with_memory": "cà phê",
+        "expected_without_memory_hint": "không"
+    }
+]

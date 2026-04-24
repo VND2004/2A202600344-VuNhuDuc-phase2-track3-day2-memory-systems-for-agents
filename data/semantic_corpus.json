@@ -1,0 +1,73 @@
+[
+    {
+        "id": "faq-docker-1",
+        "text": "Trong Docker Compose, các service gọi nhau bằng service name trong cùng network, không dùng localhost.",
+        "tags": [
+            "docker",
+            "network",
+            "debug"
+        ]
+    },
+    {
+        "id": "faq-docker-2",
+        "text": "Nếu app không kết nối được database trong Compose, hãy kiểm tra DB_HOST có trùng với tên service database hay không.",
+        "tags": [
+            "docker",
+            "database",
+            "debug"
+        ]
+    },
+    {
+        "id": "faq-memory-1",
+        "text": "Conflict handling cho user profile nên ưu tiên thông tin mới nhất và lưu timestamp cập nhật.",
+        "tags": [
+            "memory",
+            "profile",
+            "conflict"
+        ]
+    },
+    {
+        "id": "faq-memory-2",
+        "text": "Episodic memory chỉ nên lưu outcome quan trọng để tránh phình to bộ nhớ không cần thiết.",
+        "tags": [
+            "memory",
+            "episodic",
+            "design"
+        ]
+    },
+    {
+        "id": "faq-privacy-1",
+        "text": "PII nhạy cảm cần có consent rõ ràng, TTL và cơ chế xóa khỏi tất cả backend memory.",
+        "tags": [
+            "privacy",
+            "pii",
+            "compliance"
+        ]
+    },
+    {
+        "id": "faq-python-1",
+        "text": "Khi benchmark memory system, nên so sánh no-memory và with-memory trên cùng một tập hội thoại nhiều lượt.",
+        "tags": [
+            "benchmark",
+            "evaluation"
+        ]
+    },
+    {
+        "id": "faq-trim-1",
+        "text": "Token budget có thể ước lượng bằng số từ hoặc số ký tự nếu chưa có tokenizer thật sự.",
+        "tags": [
+            "token",
+            "budget",
+            "trim"
+        ]
+    },
+    {
+        "id": "faq-api-1",
+        "text": "Khi API timeout, cần lưu episodic memory về retry strategy đã thành công để dùng lại lần sau.",
+        "tags": [
+            "api",
+            "timeout",
+            "episodic"
+        ]
+    }
+]
